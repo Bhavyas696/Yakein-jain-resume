@@ -1,0 +1,75 @@
+<meta name="author" content="Yakein Jain">
+import React from "react"; import { Card, CardContent } from "@/components/ui/card"; import { Badge } from "@/components/ui/badge"; import { motion } from "framer-motion";
+
+const skills = [ "Proficient Communicator", "Identifying and Solving Complex Problems", "Time Management", "Adaptability", "Confidence", "Keen Listener" ];
+
+const languages = ["Hindi", "English", "Tamil"];
+
+const activities = ["Tally", "Using of AI", "Excel and PowerPoint Presentation"];
+
+export default function ResumePage() { return ( <div className="min-h-screen bg-gradient-to-br from-[#1e293b] to-[#0f172a] text-white p-8 font-sans"> <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}> <div className="max-w-4xl mx-auto space-y-6"> <h1 className="text-4xl font-bold text-center text-sky-300">Yakein Jain</h1> <p className="text-center">Student and Self-Employed | Madurai</p> <p className="text-center text-sm text-slate-400">yakein.j@gmail.com</p> <p className="text-center text-sm text-slate-400">DOB: September 21, 2004</p>
+
+<Card className="bg-slate-800 text-white">
+        <CardContent className="p-4">
+          <h2 className="text-2xl font-semibold text-sky-200">Profile</h2>
+          <p className="mt-2">
+            As a Sales Manager pursuing a BBA in Digital Business and Entrepreneurship at IIM Bangalore, alongside a Bachelor’s in Business Management from Amity University, I bring a powerful combination of academic excellence and practical experience. I specialize in driving sales growth through effective communication, problem-solving, and time management. My experience in real-world scenarios has shaped my ability to adapt quickly and build customer-centric solutions. My confident and keen listening skills help in fostering strong relationships and achieving organizational goals.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-slate-800 text-white">
+        <CardContent className="p-4">
+          <h2 className="text-2xl font-semibold text-sky-200">Internship Experience</h2>
+          <p className="mt-2">
+            <strong>Salesclerk - Hills Habber Pvt. Ltd., Madurai</strong><br/>
+            I served as the Sales Manager and Accountant, gaining deep insight into sales operations and financial management. Through a year of dedicated practice, I developed an understanding of the dynamics involved in effective communication between sellers and buyers, enabling efficient transaction handling and customer relationship building.
+          </p>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-slate-800 text-white">
+        <CardContent className="p-4">
+          <h2 className="text-2xl font-semibold text-sky-200">Education</h2>
+          <ul className="list-disc list-inside mt-2">
+            <li>BBA in Digital Business and Entrepreneurship, IIM Bangalore (Ongoing)</li>
+            <li>Bachelor in Business Management, Amity University (Ongoing)</li>
+          </ul>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-slate-800 text-white">
+        <CardContent className="p-4">
+          <h2 className="text-2xl font-semibold text-sky-200">Skills</h2>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {skills.map(skill => <Badge key={skill} variant="outline" className="text-white border-white">{skill}</Badge>)}
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-slate-800 text-white">
+        <CardContent className="p-4">
+          <h2 className="text-2xl font-semibold text-sky-200">Languages</h2>
+          <div className="flex flex-wrap gap-2 mt-2">
+            {languages.map(lang => <Badge key={lang} variant="secondary" className="text-white bg-sky-600">{lang}</Badge>)}
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="bg-slate-800 text-white">
+        <CardContent className="p-4">
+          <h2 className="text-2xl font-semibold text-sky-200">Achievements & Activities</h2>
+          <p className="mt-2">
+            Runner-up in the State-Level Cricket Championship held in Tamil Nadu. Passionate about sports like swimming, football, and athletics.
+          </p>
+          <ul className="list-disc list-inside mt-2">
+            {activities.map(act => <li key={act}>{act}</li>)}
+          </ul>
+        </CardContent>
+      </Card>
+    </div>
+  </motion.div>
+</div>
+
+); }
+
